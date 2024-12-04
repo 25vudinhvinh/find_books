@@ -1,0 +1,73 @@
+@import 'src/components/GlobalStyles/_variable.scss';
+.wrapp {
+  height: 64px;
+  width: 100%;
+  background-color: #000000;
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.search-and-home {
+  display: flex;
+  align-items: center;
+}
+.home-btn {
+  padding: 12px;
+  color: #b3b3b3;
+  background-color: $near-black-color;
+  border-radius: 50%;
+  margin-right: 6px;
+  &:hover {
+    font-size: 18px;
+  }
+}
+
+.input-search {
+  display: flex;
+  align-items: center;
+  color: $white-color;
+  width: 490px;
+  height: 48px;
+  background-color: $near-black-color;
+  border-radius: 500px;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: #2a2a2a;
+    border: 2px solid #333232;
+  }
+  &:focus-within {
+    border: 2px solid $white-color;
+    .search-btn {
+      color: $white-color;
+    }
+  }
+}
+.search-btn {
+  padding: 12px;
+  font-size: 2rem;
+  color: $icon-color;
+  &:hover {
+    cursor: pointer;
+    color: $white-color;
+  }
+}
+.input-search {
+  input {
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    color: $white-color;
+    font-size: 1.4rem;
+    &::placeholder {
+      color: #b3b3b3;
+    }
+  }
+}

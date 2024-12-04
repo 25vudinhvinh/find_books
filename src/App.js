@@ -1,16 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
-import Home from '~/pages/Home/Home.js';
-import Music from '~/pages/Music/Music.js';
-import Podcast from '~/pages/Podcast/Podcast.js';
-
+import { MainLayout } from '~/components/layout';
+import { publicRoute } from '~/routes/routes';
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/podcast" element={<Podcast />} />
+          {publicRoute.map((route, index) => {
+            const Element = route.element;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <MainLayout>
+                    <Element />
+                  </MainLayout>
+                }
+              />
+            );
+          })}
         </Routes>
       </div>
     </Router>
