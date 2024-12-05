@@ -1,0 +1,23 @@
+@import '../GlobalStyles/_variable.scss';
+.white-btn {
+  background-color: $white-color;
+  color: $black-color;
+}
+
+.black-btn {
+  background-color: $black-color;
+  color: $white-color;
+}
+
+.btn {
+  margin-right: 12px;
+  width: 157px;
+  height: 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+}

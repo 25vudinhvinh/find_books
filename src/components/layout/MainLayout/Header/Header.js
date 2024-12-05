@@ -1,11 +1,15 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faCircleDown, faHome, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 import { useRef, useEffect } from 'react';
+
+import Button from '~/components/Button';
+
 const cx = classNames.bind(styles);
+
 function Header() {
   const searchBtnRef = useRef(null);
   const homeBtnRef = useRef(null);
@@ -23,7 +27,7 @@ function Header() {
     });
   }, []);
   return (
-    <div className={cx('wrapp')}>
+    <div tabIndex="-1" className={cx('wrapp')}>
       <div className={cx('logo')}>
         <a href="/">
           <svg
@@ -46,17 +50,23 @@ function Header() {
         </a>
       </div>
       <div className={cx('search-and-home')}>
-        <a ref={homeBtnRef} className={cx('home-btn')} href="/">
+        <a tabIndex="-1" ref={homeBtnRef} className={cx('home-btn')} href="/">
           <FontAwesomeIcon icon={faHome} />
         </a>
         <div className={cx('input-search')}>
-          <div ref={searchBtnRef} className={cx('search-btn')}>
+          <div tabIndex="-1" ref={searchBtnRef} className={cx('search-btn')}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
-          <input placeholder="Bạn muốn phát nội dung gì?" spellCheck />
+          <input tabIndex="-1" placeholder="Bạn muốn phát nội dung gì?" spellCheck />
         </div>
       </div>
-      <div className={cx('action')}></div>
+      <div className={cx('action')}>
+        <Button color="white">Khám phá Premium</Button>
+        <Button color="black">
+          <FontAwesomeIcon icon={faCircleDown} /> Cài đặt Ứng dụng
+        </Button>
+        <FontAwesomeIcon className={cx('bell-icon')} icon={faBell} />
+      </div>
     </div>
   );
 }

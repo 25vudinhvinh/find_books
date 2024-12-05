@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 
 .logo {
@@ -26,7 +27,7 @@
   border-radius: 50%;
   margin-right: 6px;
   &:hover {
-    font-size: 18px;
+    transform: scale(1.1);
   }
 }
 
@@ -42,6 +43,9 @@
   &:hover {
     background-color: #2a2a2a;
     border: 2px solid #333232;
+    .search-btn {
+      color: $white-color;
+    }
   }
   &:focus-within {
     border: 2px solid $white-color;
@@ -69,5 +73,21 @@
     &::placeholder {
       color: #b3b3b3;
     }
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.bell-icon {
+  color: $icon-color;
+  padding: 6px;
+  font-size: 1.8rem;
+  &:hover {
+    color: $white-color;
+    transform: scale(1.1);
+    cursor: pointer;
   }
 }
