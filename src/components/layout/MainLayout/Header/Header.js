@@ -7,12 +7,14 @@ import 'tippy.js/dist/tippy.css';
 import { useRef, useEffect } from 'react';
 
 import Button from '~/components/Button';
+import avt from '~/assets/img/avt.jpg';
 
 const cx = classNames.bind(styles);
 
 function Header() {
   const searchBtnRef = useRef(null);
   const homeBtnRef = useRef(null);
+  const notiBtnRef = useRef(null);
 
   useEffect(() => {
     // Khởi tạo Tippy cho nút tìm kiếm
@@ -23,6 +25,11 @@ function Header() {
 
     tippy(homeBtnRef.current, {
       content: 'Trang chủ',
+      placement: 'bottom'
+    });
+
+    tippy(notiBtnRef.current, {
+      content: 'Bản phát hành mới',
       placement: 'bottom'
     });
   }, []);
@@ -65,7 +72,8 @@ function Header() {
         <Button color="black">
           <FontAwesomeIcon icon={faCircleDown} /> Cài đặt Ứng dụng
         </Button>
-        <FontAwesomeIcon className={cx('bell-icon')} icon={faBell} />
+        <FontAwesomeIcon ref={notiBtnRef} className={cx('bell-icon')} icon={faBell} />
+        <img className={cx('avt')} src={avt} alt="avt" />
       </div>
     </div>
   );

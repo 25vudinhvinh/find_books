@@ -1,4 +1,4 @@
-@import 'src/components/GlobalStyles/_variable.scss';
+@use 'src/components/GlobalStyles/_variable' as *;
 .wrapp {
   height: 64px;
   width: 100%;
@@ -14,9 +14,12 @@
   display: flex;
   align-items: center;
   padding: 0 8px;
+  position: relative;
 }
 
 .search-and-home {
+  position: absolute;
+  right: 31%;
   display: flex;
   align-items: center;
 }
@@ -84,9 +87,21 @@
 .bell-icon {
   color: $icon-color;
   padding: 6px;
+  margin-right: 6px;
   font-size: 1.8rem;
   &:hover {
     color: $white-color;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.avt {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border: 8px solid #1f1f1f;
+  &:hover {
     transform: scale(1.1);
     cursor: pointer;
   }

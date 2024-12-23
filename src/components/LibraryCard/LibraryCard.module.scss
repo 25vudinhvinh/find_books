@@ -1,0 +1,22 @@
+@use 'src/components/GlobalStyles/_variable' as *;
+
+.wrapp {
+  margin: 8px 0;
+  background-color: $near-black-color;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 20px;
+}
+.wrapp + .wrapp {
+  margin-top: 25px;
+}
+span {
+  color: $white-color;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-weight: 600;
+}
