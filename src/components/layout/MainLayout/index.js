@@ -9,12 +9,12 @@ const cx = classNames.bind(styles);
 function MainLayout({ children }) {
   return (
     <div>
-      <header>
+      <header className={cx('header')}>
         <Header />
       </header>
       <div className={cx('container')}>
         <Sidebar />
-        <div>{children}</div>
+        <div className={cx('content')}>{children}</div>
       </div>
       <div className={cx('footer')}>
         <SongCard />

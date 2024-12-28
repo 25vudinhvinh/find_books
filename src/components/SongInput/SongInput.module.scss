@@ -1,0 +1,32 @@
+.wrapp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.song-input {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  appearance: none;
+  height: 4px;
+  background-color: var(--white-color);
+  outline: none;
+  &:hover {
+    background-color: var(--green-color);
+  }
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 0;
+    height: 0;
+  }
+  &:hover::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    cursor: pointer;
+  }
+}

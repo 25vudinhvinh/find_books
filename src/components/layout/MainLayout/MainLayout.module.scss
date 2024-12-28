@@ -1,8 +1,19 @@
 .container {
   display: flex;
+  position: fixed;
+  top: 61px;
+  right: 0;
+  left: 0;
+}
+
+.content {
+  margin-top: 5px;
+  border-radius: 5px;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
   background-color: #000;
   width: 100%;
   min-height: 72px;

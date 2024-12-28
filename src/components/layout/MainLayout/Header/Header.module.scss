@@ -1,5 +1,6 @@
-@use 'src/components/GlobalStyles/_variable' as *;
 .wrapp {
+  position: fixed;
+  top: 0;
   height: 64px;
   width: 100%;
   background-color: #000000;
@@ -26,7 +27,7 @@
 .home-btn {
   padding: 12px;
   color: #b3b3b3;
-  background-color: $near-black-color;
+  background-color: var(--near-black-color);
   border-radius: 50%;
   margin-right: 6px;
   &:hover {
@@ -37,33 +38,33 @@
 .input-search {
   display: flex;
   align-items: center;
-  color: $white-color;
+  color: var(--white-color);
   width: 490px;
   height: 48px;
-  background-color: $near-black-color;
+  background-color: var(--near-black-color);
   border-radius: 500px;
   border: 2px solid transparent;
   &:hover {
     background-color: #2a2a2a;
     border: 2px solid #333232;
     .search-btn {
-      color: $white-color;
+      color: var(--white-color);
     }
   }
   &:focus-within {
-    border: 2px solid $white-color;
+    border: 2px solid var(--white-color);
     .search-btn {
-      color: $white-color;
+      color: var(--white-color);
     }
   }
 }
 .search-btn {
   padding: 12px;
   font-size: 2rem;
-  color: $icon-color;
+  color: var(--icon-color);
   &:hover {
     cursor: pointer;
-    color: $white-color;
+    color: var(--white-color);
   }
 }
 .input-search {
@@ -71,7 +72,7 @@
     flex: 1;
     height: 100%;
     background-color: transparent;
-    color: $white-color;
+    color: var(--white-color);
     font-size: 1.4rem;
     &::placeholder {
       color: #b3b3b3;
@@ -85,12 +86,12 @@
 }
 
 .bell-icon {
-  color: $icon-color;
+  color: var(--icon-color);
   padding: 6px;
   margin-right: 6px;
   font-size: 1.8rem;
   &:hover {
-    color: $white-color;
+    color: var(--white-color);
     transform: scale(1.1);
     cursor: pointer;
   }

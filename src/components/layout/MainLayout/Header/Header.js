@@ -68,8 +68,10 @@ function Header() {
         </div>
       </div>
       <div className={cx('action')}>
-        <Button color="white">Khám phá Premium</Button>
-        <Button color="black">
+        <Button color="white" size="large">
+          Khám phá Premium
+        </Button>
+        <Button size="large" color="black">
           <FontAwesomeIcon icon={faCircleDown} /> Cài đặt Ứng dụng
         </Button>
         <FontAwesomeIcon ref={notiBtnRef} className={cx('bell-icon')} icon={faBell} />

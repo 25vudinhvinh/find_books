@@ -26,13 +26,21 @@ function Sidebar() {
         <LibraryCard
           title="Tạo danh sách phát đầu tiên của bạn"
           desc="Rất dễ! Chúng tôi sẽ giúp bạn"
-          button={<Button color="white">Tạo danh sách phát</Button>}
+          button={
+            <Button size="large" color="white">
+              Tạo danh sách phát
+            </Button>
+          }
         />
 
         <LibraryCard
           title="Hãy cùng tìm và theo dõi một số podcast"
           desc="Chúng tôi sẽ cập nhật cho bạn thông tin về các tập mới"
-          button={<Button color="white">Duyệt xem podcast</Button>}
+          button={
+            <Button size="large" color="white">
+              Duyệt xem podcast
+            </Button>
+          }
         />
       </div>
     </div>

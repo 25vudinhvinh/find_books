@@ -1,7 +1,5 @@
-@import 'src/components/GlobalStyles/_variable.scss';
-
 .wrapp {
-  height: 540px;
+  min-height: 540px;
   width: 420px;
   background-color: #121212;
   margin: 4px 6px 0 6px;
@@ -14,6 +12,8 @@
   align-items: center;
   padding: 16px;
   background-color: #121212;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .library-btn {
@@ -21,7 +21,7 @@
   align-items: center;
   background: none;
   border: none;
-  color: $icon-color;
+  color: var(--icon-color);
   font-size: 1.8rem;
   cursor: pointer;
   white-space: nowrap;
@@ -32,7 +32,7 @@
 }
 
 .create-playlist-btn {
-  color: $icon-color;
+  color: var(--icon-color);
   cursor: pointer;
   font-size: 2rem;
 }

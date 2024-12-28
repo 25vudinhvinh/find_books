@@ -1,6 +1,15 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --near-black-color: #1f1f1f;
+  --icon-color: #b3b3b3;
+  --text-color: #b3b3b3;
+  --green-color: #1db954;
+}
+
 * {
   padding: 0;
   margin: 0;
